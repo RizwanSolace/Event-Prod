@@ -7,8 +7,8 @@ export const metadata: Metadata = {
   description: 'Internationale Event-, Marketing- und Kreativagentur für hochwertige Erlebnisse, starke Markenauftritte und Messen weltweit.',
   generator: 'v0.app',
   icons: {
-    icon: '/favicon.svg',
-    shortcut: '/favicon.svg',
+    icon: '/eventprod-favicon.svg',
+    shortcut: '/eventprod-favicon.svg',
     apple: '/apple-icon.png',
   },
 }
