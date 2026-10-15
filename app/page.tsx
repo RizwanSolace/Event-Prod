@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { ArrowDownRight, CalendarDays, Globe2, MapPin, Mic2, MoveRight, Star, Truck, Utensils, Volume2, VolumeX } from 'lucide-react'
 import { SiteHeader } from '@/components/site-header'
 import { SiteFooter } from '@/components/site-footer'
+import { AnimatedStat } from '@/components/animated-stat'
 
 const services = [
   { slug: 'entertainment-gala-dinnershows', title: 'Entertainment, Dinner Shows & Circus Productions', short: 'Premium Entertainment, Galaformate und Dinner Shows mit internationalem Show-Cast.', image: 'https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=1200&q=85', icon: Star },
@@ -33,7 +34,7 @@ export default function Page() {
     <section id="about" className="about section"><SectionTitle eyebrow="EVENTPROD" title="Event Productions by Rustam Tsodikov"/><p className="lead">Internationale Event-, Marketing- und Kreativagentur für hochwertige Erlebnisse, starke Markenauftritte und Messen weltweit.</p><div className="feature-grid">{[['PRODUCTION BOUTIQUE','Internationale Production Boutique für Premium Events, Shows und Brand Experiences.',Star],['EVENT & SHOW PRODUCTION','Konzeption, Planung und Umsetzung für Messen und Corporate Formate.',CalendarDays],['MEDIA & CREATIVE','OOH und DOOH Strategien, Creative Direction und Media Konzepte für Marken.',Mic2],['INTERNATIONAL','Standorte in Düsseldorf und Porto Cervo. Internationale Kunden und Marken.',Globe2]].map(([t,d,I])=><div className="feature" key={t as string}><I className="pink-icon"/><h3>{t as string}</h3><p>{d as string}</p></div>)}</div></section>
     <section className="statement"><div><p>OUR SIGNATURE</p><h2>Transforming events<br/><i>into experiences.</i></h2><Link href="/ueber-uns">Mehr über uns <MoveRight size={16}/></Link></div></section>
     <section id="services" className="services section"><SectionTitle eyebrow="WAS WIR TUN" title="Unsere Leistungen"/><div className="service-grid">{services.map(s=>{const I=s.icon; return <Link href={'/'+s.slug} className="service-card" key={s.slug}><img src={s.image} alt={s.title}/><div className="service-shade"/><div className="service-copy"><I/><h3>{s.title}</h3><p>{s.short}</p><span>Entdecken <MoveRight size={15}/></span></div></Link>})}</div></section>
-    <section className="stats"><div><strong>12+</strong><span>Jahre Erfahrung</span></div><div><strong>30+</strong><span>Länder weltweit</span></div><div><strong>180</strong><span>Events realisiert</span></div><div><strong>24/7</strong><span>Leidenschaft</span></div></section>
+    <section className="stats"><div><AnimatedStat value={12} suffix="+" label="years of experience"/><span>Jahre Erfahrung</span></div><div><AnimatedStat value={30} suffix="+" label="countries worldwide"/><span>Länder weltweit</span></div><div><AnimatedStat value={180} suffix="" label="events delivered"/><span>Events realisiert</span></div><div><AnimatedStat value={24} suffix="/7" label="passion"/><span>Leidenschaft</span></div></section>
     <section className="cta"><p className="eyebrow">BEREIT FÜR DEN NÄCHSTEN SCHRITT?</p><h2>Lassen Sie uns Ihr Event<br/><em>gestalten.</em></h2><Link href="/kontakt" className="pink-btn">Anfrage senden <MoveRight size={16}/></Link></section>
     <SiteFooter/>
   </main>
