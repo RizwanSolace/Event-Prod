@@ -199,3 +199,11 @@ main>.cta{background-color:#211c22;background-image:linear-gradient(90deg,rgba(2
 .about-story.is-visible .about-story-visual{transform:translateY(0);transition:transform .9s cubic-bezier(.2,.7,.2,1)}
 @media(max-width:900px){.about-story{grid-template-columns:1fr 1fr;gap:35px;padding-left:7vw;padding-right:7vw}.about-story-visual{min-height:460px}.about-photo-inset img{height:130px}.about-locations{grid-template-columns:1fr 1fr}.about-locations>a{grid-column:2}.career-application{grid-template-columns:1fr}.career-application>div:first-child{max-width:500px}}
 @media(max-width:650px){.about-story{grid-template-columns:1fr;padding:70px 24px}.about-story-visual{min-height:440px}.about-story-visual>img{width:90%;height:85%}.about-photo-inset{width:52%}.about-photo-inset img{height:120px}.about-story-copy{padding:15px 0}.about-pillars{grid-template-columns:1fr}.about-pillars article{margin:0;padding:22px 0;border-right:0;border-bottom:1px solid #d4ced2}.about-pillars article:last-child{border:0}.about-locations{grid-template-columns:1fr;gap:18px}.about-locations>a{grid-column:auto}.career-application{padding:22px 16px;margin-left:-4px;margin-right:-4px}.career-form{padding:22px 18px}.career-form-grid{grid-template-columns:1fr;gap:18px}.career-form-grid .career-note{grid-column:auto}}
+
+/* Keep the current destination visible in both navigation layouts */
+.desktop-nav>a[aria-current="page"],.nav-drop.is-active>a,.drop-menu a[aria-current="page"],.mobile-menu>a[aria-current="page"],.mobile-menu>a.is-current,.mobile-services a.is-current{color:var(--pink)}
+.nav-drop.is-dismissed .drop-menu{display:none!important}
+.desktop-nav>a[aria-current="page"]::after,.nav-drop.is-active>a::after{content:"";height:1px;background:var(--pink);position:absolute;left:0;right:0;bottom:-9px}
+.desktop-nav>a[aria-current="page"],.nav-drop.is-active>a{position:relative}
+.drop-menu a[aria-current="page"]{background:#ffffff0c;padding-left:12px;border-left:2px solid var(--pink)}
+.mobile-menu a[aria-current="page"],.mobile-menu a.is-current,.mobile-services a.is-current{font-weight:600}
