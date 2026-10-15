@@ -99,3 +99,20 @@
 .logo>span{padding-left:15px}
 .logo .logo-o{display:inline-block;width:.78em;height:.78em;padding:0!important;margin:0 .04em;vertical-align:-.08em;overflow:visible}
 .logo:hover .logo-o{filter:brightness(1.12)}
+
+/* White EventProd lockup and scroll motion */
+.brand-logo-link{display:block;flex:none;width:148px;line-height:0}
+.brand-logo-image{display:block;width:100%;height:auto;max-height:75px;object-fit:contain}
+.site-footer .brand-logo-link{width:165px;margin-bottom:20px}
+.will-reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.will-reveal.is-visible{opacity:1;transform:translateY(0)}
+.service-card.will-reveal:nth-child(3n + 2){transition-delay:90ms}
+.service-card.will-reveal:nth-child(3n){transition-delay:180ms}
+.hero-content{animation:hero-enter .95s cubic-bezier(.2,.7,.2,1) both}
+.content-hero-inner{animation:hero-enter .85s cubic-bezier(.2,.7,.2,1) both}
+@keyframes hero-enter{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.service-card img{will-change:transform}
+.footer-cta .pink-btn svg,.related-heading>a svg{transition:transform .25s ease}
+.footer-cta .pink-btn:hover svg,.related-heading>a:hover svg{transform:translateX(4px)}
+@media(max-width:600px){.brand-logo-link{width:128px;max-height:65px}.site-footer .brand-logo-link{width:150px}}
+@media(prefers-reduced-motion:reduce){.will-reveal,.will-reveal.is-visible,.hero-content,.content-hero-inner{opacity:1;transform:none;animation:none;transition:none}.service-card img,.footer-cta .pink-btn svg,.related-heading>a svg{transition:none}}

@@ -1,15 +1,16 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import './globals.css'
+import { ScrollReveal } from '@/components/scroll-reveal'
 
 export const metadata: Metadata = {
   title: 'EventProd — Event Productions by Rustam Tsodikov',
   description: 'Internationale Event-, Marketing- und Kreativagentur für hochwertige Erlebnisse, starke Markenauftritte und Messen weltweit.',
   generator: 'v0.app',
   icons: {
-    icon: '/eventprod-favicon.svg',
-    shortcut: '/eventprod-favicon.svg',
-    apple: '/apple-icon.png',
+    icon: [{ url: '/eventprod-favicon.png', sizes: '128x128', type: 'image/png' }],
+    shortcut: '/eventprod-favicon.png',
+    apple: '/eventprod-favicon.png',
   },
 }
 
@@ -29,6 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased">
+        <ScrollReveal />
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
