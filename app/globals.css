@@ -126,7 +126,7 @@
 @media(prefers-reduced-motion:reduce){.will-reveal,.will-reveal.is-visible,.hero-content,.content-hero-inner{opacity:1;transform:none;animation:none;transition:none}.service-card img,.footer-cta .pink-btn svg,.related-heading>a svg{transition:none}}
 
 /* Give the home enquiry banner an event-led photo backdrop */
-main>.cta{background-color:#211c22;background-image:linear-gradient(90deg,rgba(20,15,21,.84),rgba(24,15,22,.7)),url('https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=2200&q=88');background-size:cover;background-position:center 42%}
+main>.cta{background-color:#211c22;background-image:linear-gradient(90deg,rgba(20,15,21,.84),rgba(24,15,22,.7)),url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=2200&q=88');background-size:cover;background-position:center 42%}
 .stats strong,.career-stats strong{font-variant-numeric:tabular-nums;min-width:3ch}
 .career-content{padding:0 clamp(24px,10vw,160px) clamp(85px,11vw,145px);background:#fbfaf8}
 .career-stats{display:grid;grid-template-columns:repeat(3,1fr);background:#211c22;color:#fff;padding:42px clamp(24px,5vw,80px);margin:0 calc(clamp(24px,10vw,160px) * -1) clamp(75px,9vw,120px);text-align:center}
